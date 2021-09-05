@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   })
 
   export class IfComponent {
-  public courses: Array<number> = [2,4]
+  public courses: Array<number> = [9]
 }

@@ -1,0 +1,9 @@
+<ul>
+
+  <li *ngFor="let course of courses;even as isEven">
+
+  {{course.name}} <span *ngIf="isEven">{{index}}</span>
+
+  </li>
+
+</ul>
