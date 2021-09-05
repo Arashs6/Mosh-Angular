@@ -1,9 +1,10 @@
+<button (click)= "onAdd()">Add</button>
 <ul>
 
   <li *ngFor="let course of courses;even as isEven">
 
-  {{course.name}} <span *ngIf="isEven">{{index}}</span>
-
+  {{course.name}} <span *ngIf= "isEven">even</span>
+    <button (click)= "onDelete(course)">Remove</button>
   </li>
 
 </ul>

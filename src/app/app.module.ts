@@ -1,3 +1,4 @@
+import { ContactFormComponent } from './form/contact-form.component';
 import { ForComponent } from './directive/if/for/for.component';
 import { SwitchComponent } from './directive/if/switch/switch.component';
 import { HiddenComponent } from './directive/if/hidden-prop/hidden-prop';
@@ -14,7 +15,8 @@ import { AppComponent } from './app.component';
     IfComponent,
     HiddenComponent,
     SwitchComponent,
-    ForComponent
+    ForComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,

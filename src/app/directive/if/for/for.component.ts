@@ -12,6 +12,15 @@ import { Component } from '@angular/core';
     {id: 3,name:"Ios"}
  ]
 
+  onAdd(){
+    this.courses.push({id:4,name:"Advance Web"})
+  }
+
+  onDelete(course:Course){
+    let index = this.courses.indexOf(course);
+    this.courses.splice(index,1)
+  }
+
 }
 export class Course{
   public id!: number;
