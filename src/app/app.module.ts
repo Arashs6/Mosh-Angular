@@ -8,15 +8,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SignupFormComponent } from './signup-form/signup-form/signup-form.component';
+import { NgClassComponent } from './directive/if/ngClass/NgClassComponent';
 
 @NgModule({
   declarations: [
     AppComponent,
+    SignupFormComponent,
     IfComponent,
     HiddenComponent,
     SwitchComponent,
     ForComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    NgClassComponent
   ],
   imports: [
     BrowserModule,
