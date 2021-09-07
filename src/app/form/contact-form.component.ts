@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-contactForm',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   })
 
   export class ContactFormComponent {
-  
+    
+public methods =["Email","PhoneNumber"
+]
+
+    log(x : any){
+      console.log(x);
+      
+    }
+    
+    
 }

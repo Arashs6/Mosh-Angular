@@ -1,15 +1,41 @@
 <form >
     <div class="form-group">
         <label for="firstName">FirstName</label> 
-   <input required ngModel id="firstName" type="text" #inputForm class="form-control">
+   <input 
+   required
+   minlength="3"
+   ngModel 
+   name="firstName"
+   id="firstName"
+    #firstName ="ngModel" 
+    (change) = "log(firstName)"
+     type="text"  
+     class="form-control">
+   <div class="alert alert-danger" *ngIf="firstName.touched">
+    <div *ngIf="firstName.errors?.required">insert somthing</div>
+    <div *ngIf="firstName.errors?.minlength">minlength </div>
+   </div>
     </div>
-    <div class="alert alert-danger" **ngIf="inputForm.touch">
 
+    <div class="form-group">
+        <label for="contactMethod">contact method  :</label>
+        <select ngModel name="contactMethod" id ="contactMethod">
+            <option *ngFor="let item of methods">{{item}}</option>
+        </select>
     </div>
 
+    <div class="checkbox">
+        <label>
+                <input type="checkbox" ngModel name="isSubscribed" #checkbox = "ngModel">
+        </label>
+    </div>
+    <p>
+        {{checkbox.value | json}}
+    </p>
+    
     <div class="form-group">
         <label for="comment">comment</label> 
    <textarea id="comment" cols="30" rows="10" class="form-control"></textarea>
     </div>
-   <button class="btn btn-primary">submit</button>
+   <button class="btn btn-primary" [disabled]="firstName.errors">submit</button>
 </form>
